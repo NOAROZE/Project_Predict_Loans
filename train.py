@@ -40,7 +40,7 @@ def train_and_save_model(df, model_filename='loan_model.pkl'):
     y =df['Loan_Status']
 
     # חלוקה לנתוני אימון ונתוני בדיקה (כדי לחשב דיוק אמיתי)
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
     # יצירת ה-Pipeline: קודם מנרמלים את הנתונים, ואז מעבירים למודל הסיווג
     pipeline = Pipeline([
